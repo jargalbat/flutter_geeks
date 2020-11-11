@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_geeks/modules/home/home_route.dart';
 
 void main() {
   runApp(MyApp());
+
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      // systemNavigationBarColor: Colors.blue, // navigation bar color
+      // statusBarColor: Colors.pink, // status bar color
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

@@ -17,13 +17,10 @@ class AppBarEmpty extends PreferredSize {
 class AppBarCustom extends StatelessWidget with PreferredSizeWidget {
   @override
   final Size preferredSize;
-
   final String title;
 
-  AppBarCustom(
-    this.title, {
-    Key key,
-  })  : preferredSize = Size.fromHeight(50.0),
+  AppBarCustom(this.title, {Key key})
+      : preferredSize = Size.fromHeight(50.0),
         super(key: key);
 
   @override
@@ -37,4 +34,23 @@ class AppBarCustom extends StatelessWidget with PreferredSizeWidget {
       automaticallyImplyLeading: true,
     );
   }
+}
+
+// ignore: non_constant_identifier_names
+Widget AppBarEmpty2({
+  BuildContext context,
+  Brightness brightness,
+  Color backgroundColor,
+  double elevation,
+}) {
+  return PreferredSize(
+    preferredSize: Size.fromHeight(0.0), // here the desired height
+    child: AppBar(
+      backgroundColor: Colors.white,
+      brightness: brightness,
+      leading: Container(),
+      elevation: elevation ?? 0.0,
+      actions: <Widget>[],
+    ),
+  );
 }
