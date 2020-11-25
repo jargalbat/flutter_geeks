@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_geeks/modules/home/home_route.dart';
+import 'package:flutter_geeks/modules/home_route.dart';
 
 void main() {
   runApp(MyApp());
